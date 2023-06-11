@@ -11,11 +11,12 @@ export function BusinessCardWidget(props: BusinessCardWidgetProps) {
     <div
       className={`business-card ${props.size}`}
       css={{
-        backgroundColor: "white",
+        backgroundColor: "gray",
+        width: "400px",
         border: "1px solid black",
         borderRadius: "5px",
-        // house shaped clip path
-        clipPath: "polygon(50% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%)",
+        // hexagon shape
+        clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
       }}
     >
       <div className="name">{props.businessCard.name}</div>
