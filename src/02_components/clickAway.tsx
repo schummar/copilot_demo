@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 
 export function ClickAway() {
   const [open, setOpen] = useState(false);
-  const ref = React.useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const close = (event: MouseEvent) => {

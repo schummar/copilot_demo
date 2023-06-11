@@ -1,5 +1,4 @@
 import { BusinessCard } from "../01_models/businessCard";
-import React from "react";
 
 export interface BusinessCardWidgetProps {
   businessCard: BusinessCard;
@@ -11,12 +10,18 @@ export function BusinessCardWidget(props: BusinessCardWidgetProps) {
     <div
       className={`business-card ${props.size}`}
       css={{
-        backgroundColor: "gray",
-        width: "400px",
-        border: "1px solid black",
-        borderRadius: "5px",
+        width: "300px",
+        background: 'gray',
+        padding: '10px',
         // hexagon shape
-        clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
+        clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+        // center the hexagon
+        margin: '0 auto',
+        // center text
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <div className="name">{props.businessCard.name}</div>
